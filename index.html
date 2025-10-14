@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゾクゾク - 恐怖体験プラットフォーム</title>
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loading-overlay"></div>
+    <div class="loading-glare"></div>
+    <div class="loading-content">
+      <div class="loading-logo">ゾクゾク</div>
+      <p class="loading-subtitle">接続中…<br>未確認の恐怖信号を受信しています</p>
+      <div class="loading-progress" role="status" aria-live="polite">
+        <span class="progress-bar"></span>
+        <span class="progress-text">73% - 心拍数上昇</span>
+      </div>
+      <ul class="loading-readout">
+        <li>深夜の交信ログを同期しています</li>
+        <li>目撃証言の検証データを洗浄中</li>
+        <li>闇域プロファイルを生成しています</li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#">ゾクゾク<span>zokuzoku</span></a>
+      <nav class="site-nav" aria-label="主要ナビゲーション">
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">体験一覧</a></li>
+          <li><a href="#">ストーリー</a></li>
+          <li><a href="#">コンタクト</a></li>
+        </ul>
+      </nav>
+      <div class="account-actions" role="group" aria-label="ユーザー操作">
+        <a class="account-link" href="#">ログイン</a>
+        <a class="btn btn-primary account-cta" href="#">新規登録</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="hero-tagline">背筋を凍らせる共有型ホラーコミュニティ</p>
+        <h1>恐怖は伝染する。<br>ゾクゾクで全国の怪異と遭遇しよう。</h1>
+        <p class="hero-description">
+          匿名で投稿された怪談、未確認現象、都市伝説をリアルタイムに探索。
+          会員登録で投稿・フォロー・検証チームへの参加が解放されます。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#">無料で登録</a>
+          <a class="btn btn-ghost" href="#">ログイン</a>
+        </div>
+        <ul class="hero-highlights" aria-label="サービスの特徴">
+          <li>リアルタイム更新</li>
+          <li>音声・映像アーカイブ</li>
+          <li>コミュニティ検証</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="main-layout">
+      <div class="container layout-grid">
+        <div class="layout-main">
+          <section class="content-section content-section--new">
+            <section class="experience-feed" aria-labelledby="feed-heading">
+              <header class="section-header">
+                <h2 id="feed-heading">新着の恐怖体験</h2>
+                <p class="section-subtitle">監視チームが今夜受信した最新ログです。真偽判定の投票に参加して体験者を支援しましょう。</p>
+              </header>
+
+              <article class="experience-card experience-card--featured">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" alt="薄暗い湖面に浮かぶ霧" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>深夜監視班・玲</strong></span>
+                    <time datetime="2025-10-14T02:19">2025/10/14 02:19</time>
+                  </div>
+                  <h3>湖面から聞こえる「名前を呼ぶ声」</h3>
+                  <p class="card-excerpt">漁の準備中、暗闇の湖面から家族の声が薄く重なって聞こえたとの報告。録音データには人の声に似た周波数ノイズが断続的に混入している。</p>
+                  <div class="card-tags">
+                    <span class="badge">音声ログ</span>
+                    <span class="badge badge-outline">水域怪異</span>
+                    <span class="badge badge-outline">実地検証募集中</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>148</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">体験を読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80" alt="夜の駅ホームに停車した電車" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>軌道保安装置班</strong></span>
+                    <time datetime="2025-10-13T23:07">2025/10/13 23:07</time>
+                  </div>
+                  <h3>終点で降りた乗客が影だけ残す</h3>
+                  <p class="card-excerpt">終電後のホーム監視映像にて、乗客が車両を降りた直後に姿を消失。床面には影だけが残り、4秒間歪みながら揺れている様子が記録された。</p>
+                  <div class="card-tags">
+                    <span class="badge">映像解析</span>
+                    <span class="badge badge-outline">都市部</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>102</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">体験を読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="深い森の小道" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>フィールダーK</strong></span>
+                    <time datetime="2025-10-13T18:42">2025/10/13 18:42</time>
+                  </div>
+                  <h3>森の境界で止まったコンパス</h3>
+                  <p class="card-excerpt">トレッキング中、区画未登録の森に入るとコンパスが東西に揺れ続け停止。スマートウォッチの気圧センサーが急激に低下したまま戻らない。</p>
+                  <div class="card-tags">
+                    <span class="badge">フィールドレポート</span>
+                    <span class="badge badge-outline">異常磁場</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>76</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">体験を読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=80" alt="霧に包まれた墓地" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>夜警ログ・真琴</strong></span>
+                    <time datetime="2025-10-13T03:11">2025/10/13 03:11</time>
+                  </div>
+                  <h3>墓地で鳴り続ける未登録の鐘</h3>
+                  <p class="card-excerpt">夜警中に墓地の中央から鐘の音が聞こえ、録音と同時に温度が5℃低下。鐘の上部には誰かの手形が浮き出していたが、現場到着時には消えていた。</p>
+                  <div class="card-tags">
+                    <span class="badge">残響ログ</span>
+                    <span class="badge badge-outline">霊域</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>63</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">体験を読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="廃墟となった木造校舎の廊下" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>探索班・空</strong></span>
+                    <time datetime="2025-10-12T22:48">2025/10/12 22:48</time>
+                  </div>
+                  <h3>閉校した校舎に残る足音のループ</h3>
+                  <p class="card-excerpt">調査用ドローンで廃校の廊下を巡回したところ、特定区間で足音が永遠にループ。音源位置を追うと温度が急低下し、映像に光の歪みが現れた。</p>
+                  <div class="card-tags">
+                    <span class="badge">ドローン調査</span>
+                    <span class="badge badge-outline">廃墟</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>58</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">体験を読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <div class="feed-footer">
+                <a class="card-link feed-link" href="#">新着一覧をすべて見る</a>
+              </div>
+            </section>
+          </section>
+
+          <section class="content-section content-section--popular">
+            <section class="experience-feed popular-feed" aria-labelledby="popular-heading">
+              <header class="section-header">
+                <h2 id="popular-heading">ゾクゾクが多い記事</h2>
+                <p class="section-subtitle">24時間以内にゾクゾクが急増した危険度の高い投稿をピックアップ。コミュニティの注視が必要なケースを追跡しましょう。</p>
+              </header>
+
+              <article class="experience-card experience-card--featured">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80" alt="地下駐車場に伸びる影" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>監視記録室・悠</strong></span>
+                    <time datetime="2025-10-11T02:08">2025/10/11 02:08</time>
+                  </div>
+                  <h3>地下駐車場で増殖する影</h3>
+                  <p class="card-excerpt">連夜監視を行う駐車場カメラにて、車の台数より多い影が出現。影の輪郭が時間と共に肥大し、最終的に天井へ吸い込まれている。</p>
+                  <div class="card-tags">
+                    <span class="badge">映像解析</span>
+                    <span class="badge badge-outline">影現象</span>
+                    <span class="badge badge-outline">緊急追跡</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>312</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">レポートを読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1500239038240-579ad224080c?auto=format&fit=crop&w=900&q=80" alt="夜霧の中の灯台" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>深海調査班・詩</strong></span>
+                    <time datetime="2025-10-10T23:54">2025/10/10 23:54</time>
+                  </div>
+                  <h3>灯台の明滅に同期する低周波</h3>
+                  <p class="card-excerpt">北方の無人灯台が不規則に明滅し、付近の船舶が同じ周期でエンジン停止。周波数は人の心拍数に近く、乗組員らが強い不安感を訴えている。</p>
+                  <div class="card-tags">
+                    <span class="badge">音響分析</span>
+                    <span class="badge badge-outline">海域</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>268</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">レポートを読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="霧の濃い山道" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>山岳検証班・朔</strong></span>
+                    <time datetime="2025-10-10T19:21">2025/10/10 19:21</time>
+                  </div>
+                  <h3>山間で同じ夢を共有した登山隊</h3>
+                  <p class="card-excerpt">5名の登山隊が同時に“呼ぶ声”の夢を見て目覚め、GPSログが反時計回りに歪む現象が発生。隊員の一人が夜明けまで声を繰り返したと証言。</p>
+                  <div class="card-tags">
+                    <span class="badge">フィールドレポート</span>
+                    <span class="badge badge-outline">集団幻聴</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>241</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">レポートを読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="廃墟となった学校の教室" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>旧校舎アーカイブ</strong></span>
+                    <time datetime="2025-10-10T16:03">2025/10/10 16:03</time>
+                  </div>
+                  <h3>封鎖教室で逆再生されるチャイム</h3>
+                  <p class="card-excerpt">廃校にて録音した昼休みチャイムが逆再生される謎のノイズを含む。編集でノイズ部分のみ抽出すると、人名のような断片が浮かび上がった。</p>
+                  <div class="card-tags">
+                    <span class="badge">音響分析</span>
+                    <span class="badge badge-outline">廃校</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>226</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">レポートを読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <figure class="card-thumb">
+                  <img src="https://images.unsplash.com/photo-1520691200670-0f2f3f917f14?auto=format&fit=crop&w=900&q=80" alt="深夜の住宅街に差し込む赤い光" loading="lazy">
+                </figure>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="card-poster">投稿者: <strong>住宅防犯ネット</strong></span>
+                    <time datetime="2025-10-10T04:27">2025/10/10 04:27</time>
+                  </div>
+                  <h3>住宅街を横切る赤い光帯</h3>
+                  <p class="card-excerpt">深夜、防犯カメラが音もなく移動する赤い光帯を記録。光が通過した家屋の窓は翌朝すべて内側から凍結し、室内の時計が一斉に停止していた。</p>
+                  <div class="card-tags">
+                    <span class="badge">監視網</span>
+                    <span class="badge badge-outline">都市部</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-actions" role="group" aria-label="体験の操作">
+                      <button type="button" class="card-action" aria-label="ゾクゾクを送る">ゾクゾク <span>219</span></button>
+                      <button type="button" class="card-action" aria-label="体験をシェアする">シェア</button>
+                      <button type="button" class="card-action" aria-label="体験を保存する">保存</button>
+                    </div>
+                    <a href="#" class="card-link">レポートを読む</a>
+                  </div>
+                </div>
+              </article>
+
+              <div class="feed-footer">
+                <a class="card-link feed-link" href="#">ゾクゾク最多記事をさらに見る</a>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <aside class="site-sidebar" aria-labelledby="sidebar-heading">
+          <div class="sidebar-section">
+            <h2 id="sidebar-heading">監視センター速報</h2>
+            <ul class="sidebar-feed">
+              <li>
+                <span class="feed-title">未解析波形: 霧島連峰</span>
+                <time datetime="2025-10-14T01:02">01:02 更新</time>
+              </li>
+              <li>
+                <span class="feed-title">深夜特番「封鎖回線」公開収録</span>
+                <time datetime="2025-10-13T22:10">22:10 更新</time>
+              </li>
+              <li>
+                <span class="feed-title">失踪追跡: 札幌地区で追加目撃</span>
+                <time datetime="2025-10-13T20:55">20:55 更新</time>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <h2>カテゴリトラッカー</h2>
+            <ul class="sidebar-tags">
+              <li><a href="#">#水域怪異 <span>18</span></a></li>
+              <li><a href="#">#廃線路 <span>12</span></a></li>
+              <li><a href="#">#交信ログ <span>9</span></a></li>
+              <li><a href="#">#未確認生物 <span>7</span></a></li>
+              <li><a href="#">#境界霊場 <span>5</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section sidebar-cta">
+            <h2>あなたの恐怖を保護する</h2>
+            <p>登録すると暗号化ストレージに体験を保存でき、専門調査員のレビューも優先されます。</p>
+            <a class="btn btn-primary" href="#">無料で登録</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="src/js/main.js" defer></script>
+</body>
+</html>
