@@ -70,3 +70,55 @@
     }
   });
 })();
+
+// Header Scroll Behavior (SP only)
+(function () {
+  const header = document.querySelector('.site-header');
+
+  if (!header) {
+    return;
+  }
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  const updateHeaderVisibility = () => {
+    const currentScrollY = window.scrollY;
+
+    // Only apply on mobile (720px or less)
+    if (window.innerWidth <= 720) {
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down & past threshold - hide header
+        header.classList.add('is-hidden');
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
+        header.classList.remove('is-hidden');
+      }
+
+      // Always show header at the top of the page
+      if (currentScrollY <= 10) {
+        header.classList.remove('is-hidden');
+      }
+    } else {
+      // Remove class on desktop
+      header.classList.remove('is-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderVisibility);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) {
+      header.classList.remove('is-hidden');
+    }
+  });
+})();
