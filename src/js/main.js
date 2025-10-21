@@ -43,8 +43,16 @@
     // Prevent body scroll when menu is open
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
+
+      // Always show header when menu is open
+      const header = document.querySelector('.site-header');
+      if (header) {
+        header.classList.remove('is-hidden');
+      }
     } else {
       document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     }
   };
 
@@ -84,6 +92,12 @@
 
   const updateHeaderVisibility = () => {
     const currentScrollY = window.scrollY;
+
+    // Don't apply scroll behavior when menu is open
+    if (document.body.classList.contains('menu-open')) {
+      ticking = false;
+      return;
+    }
 
     // Only apply on mobile (720px or less)
     if (window.innerWidth <= 720) {
